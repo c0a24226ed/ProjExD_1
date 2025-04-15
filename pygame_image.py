@@ -13,15 +13,16 @@ def main():
     tmr = 0
     kk_img = pg.image.load("fig/3.png")  
     kk_img = pg.transform.flip(kk_img, True, False)  
-    screen.bit(kk_img,[300,200])
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT: return
 
         screen.blit(bg_img, [0, 0])
+        screen.bit(kk_img, [300, 200])
         pg.display.update()
         tmr += 1        
         clock.tick(10)
+
 
 if __name__ == "__main__":
     pg.init()
